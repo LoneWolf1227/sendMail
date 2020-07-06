@@ -4,7 +4,8 @@ class BTX24{
 
     function method($method, $params){
 
-        $url = 'https://b24-ymflsh.bitrix24.ru/rest/1/uv1zcsd5ybu1i974/' . $method;
+        $url = 'your_link_for_rest_api' . $method;
+
         $c = curl_init($url);
         curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($c, CURLOPT_POST, true);
