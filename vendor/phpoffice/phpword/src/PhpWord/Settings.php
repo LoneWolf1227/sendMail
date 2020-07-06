@@ -124,7 +124,7 @@ class Settings
      *
      * @var string
      */
-    private static $tempDir = '';
+    private static $tempDir =__DIR__ . '/../../../../../temp';
 
     /**
      * Enables built-in output escaping mechanism.

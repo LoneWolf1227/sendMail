@@ -1,7 +1,5 @@
 <?php
 require 'vendor/autoload.php';
-require __DIR__ . '/libs/BTX24.php';
-require __DIR__ . '/libs/Num2str.php';
 
 use PhpOffice\PhpWord\Element\TextRun;
 
@@ -196,11 +194,6 @@ for ($i=0; $i<$invoice_list['total']; ++$i){
                             ' ',
                             array($responName, '<' . $responEmail . '>')
                         ),
-                        'MESSAGE_TO' => implode(
-                            ' ',
-                            array($invoice['result']['INVOICE_PROPERTIES']['FIO'], '<' . $responEmail . '>')
-                        ),
-
                     ),
                     'FILES' => array(
                         'fileData' => array(
