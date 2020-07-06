@@ -1,5 +1,7 @@
 <?php
 require 'vendor/autoload.php';
+require_once __DIR__ . '/libs/BTX24.php';
+require_once __DIR__ . '/libs/Num2str.php';
 
 use PhpOffice\PhpWord\Element\TextRun;
 

@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/libs/BTX24.php';
+require_once __DIR__ . '/libs/Num2str.php';
 
 $BX24 = new BTX24();
 $num2str = new Num2str();
