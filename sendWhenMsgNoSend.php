@@ -29,9 +29,9 @@ function writeToLog($data, $title = '')
     return true;
 }
 
-for ($i=0; $i<$invoice_list['total']; ++$i){
+$message = '';
 
-    $message = '';
+for ($i=0; $i<$invoice_list['total']; ++$i){
 
     $invoice = $BX24->method('crm.invoice.get', array(
         'id' => $invoice_list['result'][$i]['ID']
