@@ -44,13 +44,14 @@ for ($i=0; $i<$invoice_list['total']; ++$i){
 
     $dateFromCrm = explode('-', $end_time);
     $dateCurrent = explode('-', $currentFormatedDate);
-
+    var_dump($dateFromCrm);
+    var_dump($dateCurrent);
     if ($dateFromCrm[1] === $dateCurrent[1]){
         if ($dateCurrent[2] + 2 == $dateFromCrm[2]){
             $message = 'sendWithDoc';
         }
     }
-    else if ($dateFromCrm[1] > $dateCurrent[1] && $dateFromCrm[1] == $dateCurrent[1]+1){
+    else if (($dateFromCrm[1] > $dateCurrent[1] && $dateFromCrm[1] == $dateCurrent[1]+1) || $dateFromCrm[0] > $dateCurrent[0]){
         $lastDay = date('t', $currentDate);
         //теперь в переменной $lastDay хранится последняя дата месяца
         if ($dateFromCrm[2]+$lastDay === $dateCurrent[2]+2){
